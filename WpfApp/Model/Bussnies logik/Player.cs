@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppSortePer
+namespace WpfApp
 {
-    abstract class Player
+    public class Player
     {
         public List<Card> hand = new List<Card>();
         public string playerName;
-        public bool isOut = false;
         public bool lost = false;
-        protected Gui gui = new Gui();
 
         public Player(string name)
         {
@@ -24,42 +23,17 @@ namespace ConsoleAppSortePer
             hand.Add(card);
         }
 
-        public virtual void DrawFromPlayer(Player player, int index)
+        public virtual void DrawFromPlayer(Player player, int CardIndex)
         {
-            if (hand.Count == 0)
-            {
-                gui.NoCardsLeft(playerName);
-                isOut = true;
-                return;
-            }
-            gui.ChooseCard(playerName, player.hand.Count());
-            index = UserInput();
-            hand.Add(player.hand.ElementAt(index - 1));
-            player.hand.RemoveAt(index - 1);
-        }
+            //if (player.hand.Count == 0)
+            //{
+            //    Debug.WriteLine(playerName + " has no cards left and is out of the game \n");
+            //    return;
+            //}
+            Debug.WriteLine(playerName + " choose a card between 1 and " + player.hand.Count() + "\n");
+            hand.Add(player.hand.ElementAt(CardIndex - 1));
+            player.hand.RemoveAt(CardIndex - 1);
 
-        public int UserInput()
-        {
-            bool valid = false;
-            int value = 0;
-            while (!valid)
-            {
-                if (Int32.TryParse(Console.ReadLine(), out value))
-                {
-                    valid = true;
-                }
-            }
-            return value;
-        }
-        public void PlayerTurn(Player player)
-        {
-            if (hand.Count == 1 && hand.First().CardValue == 10 && hand.First().CardSuit == Card.Suit.Spades)
-            {
-                lost = true;
-                return;
-            }
-            DrawFromPlayer(player, 0);
-            CheckMatches();
         }
 
         public void CheckMatches()
@@ -72,7 +46,9 @@ namespace ConsoleAppSortePer
                     {
                         if (card.CardColor == hand[i].CardColor)
                         {
-                            gui.CheckCard(playerName, card.ToString(), hand[i].ToString());
+                            Debug.WriteLine(playerName + " found a pair! \n");
+                            Debug.WriteLine("They matched " + card.ToString());
+                            Debug.WriteLine("with " + hand[i].ToString() + "\n");
                             hand.Remove(hand[i]);
                             hand.Remove(card);
                         }
@@ -80,6 +56,5 @@ namespace ConsoleAppSortePer
                 }
             }
         }
-    
-}
+    }
 }

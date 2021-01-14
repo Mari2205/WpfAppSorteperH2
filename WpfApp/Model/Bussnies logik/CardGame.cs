@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppSortePer
+namespace WpfApp
 {
     abstract class CardGame
     {
@@ -28,7 +28,8 @@ namespace ConsoleAppSortePer
                 Cards.Add(new Card(Card.Suit.Hearts, (byte)(i + 1)));
             }
         }
-        public abstract void Play(List<Player> players);
+
+        //public abstract void Play(List<Player> players);
 
     }
 }

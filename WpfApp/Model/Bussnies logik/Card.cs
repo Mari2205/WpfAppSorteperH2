@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppSortePer
+namespace WpfApp
 {
-    class Card
+    public class Card
     {
         public enum Color
         {
