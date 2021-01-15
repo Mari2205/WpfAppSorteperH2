@@ -28,8 +28,5 @@ namespace WpfApp
                 Cards.Add(new Card(Card.Suit.Hearts, (byte)(i + 1)));
             }
         }
-
-        //public abstract void Play(List<Player> players);
-
     }
 }

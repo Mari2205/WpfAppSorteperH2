@@ -131,5 +131,8 @@
   <ItemGroup>
     <Resource Include="assce\Buttons\start-button-power-button-vector-23935963-removebg-preview %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assce\person colour\chatbot-portable-network-graphics-internet-bot-computer-icons-clip-art-png-favpng-TpPVvituEvDLWVnTB9q4KvjR7-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

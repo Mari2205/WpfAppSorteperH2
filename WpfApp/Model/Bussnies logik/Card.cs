@@ -44,7 +44,6 @@ namespace WpfApp
             {
                 this.color = Color.Red;
             }
-
         }
 
         public override string ToString()

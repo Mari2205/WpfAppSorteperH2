@@ -25,12 +25,8 @@ namespace WpfApp
 
         public virtual void DrawFromPlayer(Player player, int CardIndex)
         {
-            //if (player.hand.Count == 0)
-            //{
-            //    Debug.WriteLine(playerName + " has no cards left and is out of the game \n");
-            //    return;
-            //}
             Debug.WriteLine(playerName + " choose a card between 1 and " + player.hand.Count() + "\n");
+
             hand.Add(player.hand.ElementAt(CardIndex - 1));
             player.hand.RemoveAt(CardIndex - 1);
 

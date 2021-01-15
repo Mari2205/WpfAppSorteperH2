@@ -25,29 +25,13 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="imageDeadPlayerCount" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="63" Source="assce/person colour/red_per-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.RowSpan="2"/>
-        <Image x:Name="imagePlayer1" HorizontalAlignment="Left" Height="61" Margin="186,140,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/green_per-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Image x:Name="imagePlayer2" HorizontalAlignment="Left" Height="61" Margin="501,10,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/black_per-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Image x:Name="imagePlayer3" HorizontalAlignment="Left" Height="61" Margin="501,255,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/noPer-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Label x:Name="lablePlayer1" Content="hvad de trak" HorizontalAlignment="Left" Margin="111,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1"/>
-        <Label x:Name="lablePlayer4" Content="hvad de trak" HorizontalAlignment="Left" Margin="561,29.014,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1"/>
-        <Label x:Name="lablePlayer3" Content="hvad de trak" HorizontalAlignment="Left" Margin="561,271.014,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1" Visibility="Visible"/>
-        <TextBox x:Name="textboxDeadPlayerCount" HorizontalAlignment="Left" Height="31" Margin="27,32,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="27" SelectionBrush="White" IsEnabled="False" Grid.RowSpan="2" Foreground="Black" FontSize="24">
-            <TextBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.01"/>
-            </TextBox.Background>
-        </TextBox>
-        <Label x:Name="LabelChoseCardWhichPlayer" Content="Player 1" HorizontalAlignment="Left" Margin="10,353,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" Height="23"/>
-        <Label x:Name="labelChoseCard" Content="Vælg et kort imellem x-xx" HorizontalAlignment="Left" Margin="10,322,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White"/>
-        <TextBox x:Name="textboxPlayerChoseCard" HorizontalAlignment="Left" Height="23" Margin="67,353,0,0" Grid.Row="1" TextWrapping="Wrap" Text="vælg et kort" VerticalAlignment="Top" Width="88" BorderBrush="#FF9B9595" GotFocus="TextboxPlayerChoseCard_GotFocus">
+        <Image x:Name="imageHumanPlayer" HorizontalAlignment="Left" Height="61" Margin="176,140,0,0" VerticalAlignment="Top" Width="54" Source="assce/person colour/black_per-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
+        <TextBox x:Name="textboxPlayerChoseCard" HorizontalAlignment="Left" Height="23" Margin="166,206,0,0" Grid.Row="1" TextWrapping="Wrap" Text="vælg et kort" VerticalAlignment="Top" Width="75" BorderBrush="#FF9B9595" GotFocus="TextboxPlayerChoseCard_GotFocus">
             <TextBox.Background>
                 <SolidColorBrush Color="White"/>
             </TextBox.Background>
         </TextBox>
-        <Image x:Name="imagePlayer6" HorizontalAlignment="Left" Height="61" Margin="239,255,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/black_per-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Image x:Name="imagePlayer5" HorizontalAlignment="Left" Height="61" Margin="558,140,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/noPer-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Image x:Name="imagePlayer4" HorizontalAlignment="Left" Height="61" Margin="239,10,0,0" VerticalAlignment="Top" Width="55" Source="assce/person colour/noPer-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
-        <Label x:Name="lablePlayer6" Content="hvad de trak" HorizontalAlignment="Left" Margin="166,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1"/>
+        <Image x:Name="imageBotPlayer" HorizontalAlignment="Left" Height="61" Margin="553,140,0,0" VerticalAlignment="Top" Width="80" Source="assce/person colour/chatbot-portable-network-graphics-internet-bot-computer-icons-clip-art-png-favpng-TpPVvituEvDLWVnTB9q4KvjR7-removebg-preview.png" RenderTransformOrigin="1.698,0.417" Grid.Row="1"/>
         <Button x:Name="buttonStart" Content="" HorizontalAlignment="Left" Margin="312,82,0,0" Grid.Row="1" VerticalAlignment="Top" Width="173" Height="169" RenderTransformOrigin="0.5,0.5" Click="ButtonStart_Click" Foreground="#FFC76464">
             <Button.BorderBrush>
                 <ImageBrush/>
@@ -64,19 +48,16 @@
                 <ImageBrush ImageSource="/WpfApp;component/assce/Buttons/start-button-power-button-vector-23935963-removebg-preview (1).png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="lablePlayer2" Content="hvad de trak" HorizontalAlignment="Left" Margin="159,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1"/>
-        <Label x:Name="lablePlayer5" Content="hvad de trak" HorizontalAlignment="Left" Margin="618,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.204,0.55" Height="27" Width="75" Foreground="Black" Background="#00000000" Grid.Row="1"/>
-        <Button x:Name="buttonUsrChose" Content="Button" HorizontalAlignment="Left" Margin="10,296,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ButtonP1" Content="Button" HorizontalAlignment="Left" Margin="166,181,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button x:Name="ButtonP2" Content="Button" HorizontalAlignment="Left" Margin="558,181,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <ListView x:Name="listP1" HorizontalAlignment="Left" Height="218" Margin="42,62,0,0" Grid.Row="1" VerticalAlignment="Top" Width="125">
+        <Button x:Name="ButtonHumanPlayer" Content="Trak et kort" HorizontalAlignment="Left" Margin="166,181,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="ButtonBotPlayer" Content="Trak et kort" HorizontalAlignment="Left" Margin="558,181,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <ListView x:Name="listHumanPlayer" HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="151" Grid.RowSpan="2" Margin="10,10,0,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="listP2" HorizontalAlignment="Left" Height="218" Margin="632,62,0,0" Grid.Row="1" VerticalAlignment="Top" Width="125">
+        <ListView x:Name="listBotPlayer" HorizontalAlignment="Left" Height="399" Margin="638,10,0,0" VerticalAlignment="Top" Width="144" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

@@ -11,7 +11,6 @@ namespace WpfApp
     {
         private CardGame cardGame;
         public List<Player> players = new List<Player>();
-        private bool gameOver = false;
         public event EventHandler Lostgame;
         public event EventHandler UpdatePlayerList;
 
@@ -69,36 +68,19 @@ namespace WpfApp
             }
         }
 
-        public void DrawCardP1(int index)
+        public void DrawCardFromPlayer(int cardIndex, int playerIndex, int nextPlayerIndex)
         {
-            PlayerLost(players[1]);
+            PlayerLost(players[nextPlayerIndex]);
 
-            if (players[0].lost)
+            if (players[playerIndex].lost)
             {
-                Debug.WriteLine(players[0] + " lost the game");
-                Lostgame?.Invoke(this, EventArgs.Empty);
-                gameOver = true;
+                Debug.WriteLine(players[playerIndex].playerName + " lost the game");
+                Lostgame?.Invoke(this, EventArgs.Empty); // her vægger et envent Lostgame
                 return;
             }
 
-            players[0].DrawFromPlayer(players[1], index);
-            UpdatePlayerList?.Invoke(this, EventArgs.Empty);
-        }
-
-        public void DrawCardP2(int index)
-        {
-            PlayerLost(players[0]);
-
-            if (players[1].lost)
-            {
-                Debug.WriteLine(players[1] + " lost the game");
-                Lostgame?.Invoke(this, EventArgs.Empty);
-                gameOver = true;
-                return;
-            }
-
-            players[1].DrawFromPlayer(players[0], index);
-            UpdatePlayerList?.Invoke(this, EventArgs.Empty);
+            players[playerIndex].DrawFromPlayer(players[nextPlayerIndex], cardIndex);
+            UpdatePlayerList?.Invoke(this, EventArgs.Empty); // her vægger et envent UpdatePlayerList
         }
 
         public void CheckForePair(int index)
