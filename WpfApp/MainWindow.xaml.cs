@@ -43,6 +43,9 @@ namespace WpfApp
         {
             Debug.WriteLine("Game.lostGame");
             MessageBox.Show("lost the game");
+
+            ButtonBotPlayer.IsEnabled = false;
+            ButtonHumanPlayer.IsEnabled = false;
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -64,6 +67,8 @@ namespace WpfApp
             listHumanPlayer.Visibility = Visibility.Visible;
             #endregion
 
+            ButtonBotPlayer.IsEnabled = false;
+
             // her shuffler og uddeler jeg kortene
             game.Start();
 
@@ -76,6 +81,9 @@ namespace WpfApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            ButtonHumanPlayer.IsEnabled = false;
+            ButtonBotPlayer.IsEnabled = true;
+
             game.UpdatePlayerList += Game_UpdatePlayerList; // her laver jeg en subscription til Game_UpdatePlayerList
             game.DrawCardFromPlayer(Convert.ToInt32(textboxPlayerChoseCard.Text), 0, 1);
             game.CheckForePair(0);
@@ -84,10 +92,12 @@ namespace WpfApp
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            ButtonBotPlayer.IsEnabled = false;
+            ButtonHumanPlayer.IsEnabled = true;
+
             game.UpdatePlayerList += Game_UpdatePlayerList; // her laver jeg en subscription til Game_UpdatePlayerList
             game.DrawCardFromPlayer(Convert.ToInt32(textboxPlayerChoseCard.Text), 1, 0);
             game.CheckForePair(1);
-
         }
 
         /// <summary>
