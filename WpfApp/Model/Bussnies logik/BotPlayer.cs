@@ -15,6 +15,11 @@ namespace WpfApp
             
         }
 
+        /// <summary>
+        /// her laver jeg en override fordi at en bot player skal trake et tilfældigt kort og et bruger difineret kort
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="index"></param>
         public override void DrawFromPlayer(Player player, int index)
         { 
             Debug.WriteLine(playerName + " choose a card between 1 and " + player.hand.Count() + "\n");
